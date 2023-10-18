@@ -1,17 +1,14 @@
-
 #include <stdio.h>
+int get_max(int x,int y)
+{
+    return(x>y?x:y);
+}
 int main()
 {
-    int coding = 0;
-    printf("你会去敲代码吗？（选择1 or 0）:>");
-    scanf("%d",&coding);
-    if(coding == 1)
-    {
-        printf("坚持，你会有好offer\n");
-    }
-    else
-    {
-        printf("放弃，回家卖红薯\n");
-    }
+    int a = 0;
+    int b = 0;
+    scanf("%d %d",&a,&b);
+    int m = get_max(a,b);
+    printf("%d\n",m);
     return 0;
 }
