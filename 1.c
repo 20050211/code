@@ -1,14 +1,18 @@
 #include <stdio.h>
-int get_max(int x,int y)
+void swap(int* px,int* py)
 {
-    return(x>y?x:y);
+    int z = *px;
+    *px =*py;
+    *py=z;
 }
 int main()
 {
     int a = 0;
     int b = 0;
     scanf("%d %d",&a,&b);
-    int m = get_max(a,b);
-    printf("%d\n",m);
+    printf("交换前:a=%d,b=%d",a,b);
+    swap(&a,&b);
+    printf("交换后:a=%d,b=%d",a,b);
     return 0;
+
 }
